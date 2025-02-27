@@ -19,5 +19,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly(libs.bundles.common)
+    implementation("com.github.inorichi.injekt:injekt-core:0.0.4") // ✅ Use a stable version
 }
+
