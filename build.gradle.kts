@@ -5,24 +5,26 @@ buildscript {
         maven(url = "https://plugins.gradle.org/m2/")
     }
 plugins {
-    id("com.android.library") // ✅ Required for Android projects
-    id("org.jetbrains.kotlin.android") // ✅ Kotlin plugin
+    id("com.android.library") // ✅ Required for an Android library
+    id("org.jetbrains.kotlin.android") // ✅ Required for Kotlin Android projects
 }
 
 android {
-    namespace = "your.extension.package" // Replace with actual package name
     compileSdk = 34
 
     defaultConfig {
         minSdk = 21
         targetSdk = 34
     }
+
+    buildFeatures {
+        viewBinding = true // ✅ Enable ViewBinding if needed
+    }
 }
 
 dependencies {
-    implementation("eu.kanade.tachiyomi:injekt:0.0.4") // ✅ Correct dependency
+    implementation("eu.kanade.tachiyomi:injekt:0.0.4") // ✅ Correct injekt dependency
 }
-
 
 }
 
