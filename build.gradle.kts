@@ -4,12 +4,9 @@ buildscript {
         google()
         maven(url = "https://plugins.gradle.org/m2/")
     }
-    dependencies {
-        classpath(libs.gradle.agp)
-        classpath(libs.gradle.kotlin)
-        classpath(libs.gradle.serialization)
-        classpath(libs.gradle.kotlinter)
-    }
+ dependencies {
+    implementation("eu.kanade.tachiyomi:injekt:0.0.4")
+}
 }
 
 allprojects {
