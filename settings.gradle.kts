@@ -39,3 +39,10 @@ fun loadIndividualExtension(lang: String, name: String) {
 fun File.eachDir(block: (File) -> Unit) {
     listFiles()?.filter { it.isDirectory }?.forEach { block(it) }
 }
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }  // ✅ Add this line
+    }
+}
