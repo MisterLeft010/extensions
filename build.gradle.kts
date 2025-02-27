@@ -9,9 +9,19 @@ plugins {
     kotlin("android")
 }
 
-dependencies {
-    implementation("eu.kanade.tachiyomi:injekt:0.0.4")
+android {
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 21
+        targetSdk = 34
+    }
 }
+
+dependencies {
+    implementation("eu.kanade.tachiyomi:injekt:0.0.4") // ✅ Correct location
+}
+
 }
 
 allprojects {
