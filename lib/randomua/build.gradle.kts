@@ -1,24 +1,30 @@
+import org.gradle.api.JavaVersion
+
 plugins {
-    id("com.android.library")
-    kotlin("android")
-    id("kotlinx-serialization")
+    id("com.android.library") // ✅ Android Library Plugin
+    id("kotlin-android") // ✅ Kotlin Plugin for Android
 }
 
 android {
-    compileSdk = AndroidConfig.compileSdk
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = AndroidConfig.minSdk
+        minSdk = 21
+        targetSdk = 34
     }
 
-    namespace = "eu.kanade.tachiyomi.lib.randomua"
-}
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 
-repositories {
-    mavenCentral()
+    buildFeatures {
+        viewBinding = true // ✅ Enable ViewBinding
+    }
 }
 
 dependencies {
-    implementation("com.github.inorichi.injekt:injekt-core:0.0.4") // ✅ Use a stable version
+    implementation("eu.kanade.tachiyomi:injekt:0.0.4") // ✅ Correct injekt-core dependency
 }
+
 
