@@ -4,9 +4,10 @@ buildscript {
         google()
         maven(url = "https://plugins.gradle.org/m2/")
     }
- dependencies {
+dependencies {
     implementation("eu.kanade.tachiyomi:injekt:0.0.4")
 }
+
 }
 
 allprojects {
