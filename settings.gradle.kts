@@ -43,7 +43,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }  
-        maven { url = uri("https://maven.tachiyomi.org") }  // ✅ Add this if missing
+        maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://maven.tachiyomi.org") }  // ✅ Required for injekt
     }
 }
